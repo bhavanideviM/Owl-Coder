@@ -1,0 +1,15 @@
+n=int(input())
+a=[int(i) for i in input().split()]
+t=int(input())
+k=[]
+l=0
+h=len(a)-1
+while l<=h:
+    m=(l+h)>>1
+    if a[m]==t:
+        print("Found")
+    if a[m]<t:
+        l=m+1
+    if a[m]>t:
+        h=m-1
+print("Not FOund")
