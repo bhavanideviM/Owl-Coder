@@ -1,0 +1,19 @@
+#count of subsequences sum using backtacking:
+
+def subseqcnt(i,s,c,n,t,a):
+    if (i==n):
+        if (s==t):
+            return 1
+        else:
+            return 0
+    s+=a[i]
+    
+    l=subseqcnt(i+1,s,c,n,t,a)
+    s-=a[i]
+    r=subseqcnt(i+1,s,c,n,t,a)
+    return (l+r)
+        
+    
+n,t=map(int,input().split())
+a=list(map(int,input().split()))
+print(subseqcnt(0,0,0,n,t,a))
