@@ -1,2 +1,2 @@
 # Owl-Coder
-Trying to learn more coding
+Learining More CODING...
